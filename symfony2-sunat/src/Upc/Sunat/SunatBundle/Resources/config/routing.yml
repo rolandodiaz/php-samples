@@ -1,0 +1,24 @@
+_admin:
+    resource: "@SunatBundle/Controller/SecuredController.php"
+    type:     annotation
+    prefix:   /admin
+    
+_concept:
+    resource: "@SunatBundle/Controller/ConceptController.php"
+    type:     annotation
+    prefix:   /admin/concept
+    
+_person:
+    resource: "@SunatBundle/Controller/PersonController.php"
+    type:     annotation
+    prefix:   /admin/person
+    
+_debt:
+    resource: "@SunatBundle/Controller/DebtController.php"
+    type:     annotation
+    prefix:   /admin/debt
+    
+_home:
+    resource: "@SunatBundle/Controller/HomeController.php"
+    type:     annotation
+    prefix:   /

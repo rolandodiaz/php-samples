@@ -1,0 +1,20 @@
+parameters:
+#    sunat.example.class: Upc\Sunat\SunatBundle\Example
+
+services:
+    sunat.form.type.concept:          
+        class: Upc\Sunat\SunatBundle\Form\Type\ConceptType
+        tags:
+            - { name: form.type, alias: concept }
+    sunat.form.type.person:
+        class: Upc\Sunat\SunatBundle\Form\Type\PersonType
+        tags:
+            - { name: form.type, alias: person }
+    sunat.form.type.debt:
+        class: Upc\Sunat\SunatBundle\Form\Type\DebtType
+        tags:
+            - { name: form.type, alias: debt }
+    sunat.form.type.debt_search:
+        class: Upc\Sunat\SunatBundle\Form\Type\DebtSearchType
+        tags:
+            - { name: form.type, alias: debt_search }

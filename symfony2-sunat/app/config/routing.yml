@@ -1,0 +1,4 @@
+sunat:
+    resource: "@SunatBundle/Resources/config/routing.yml"
+    prefix:   /
+

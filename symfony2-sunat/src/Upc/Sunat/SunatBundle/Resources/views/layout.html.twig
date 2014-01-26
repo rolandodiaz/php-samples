@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+{% block head %}
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>{% block title 'Sitio Administrativo' %}</title>
+        <link rel="icon" sizes="16x16" href="{{ asset('favicon.ico') }}" />
+        <link rel="stylesheet" href="{{ asset('bundles/backend/css/bootstrap.min.css') }}" />
+        <link rel="stylesheet" href="{{ asset('bundles/backend/css/bootstrap-responsive.min.css') }}" />
+        <style type="text/css">
+        body {
+          padding-top: 20px;
+          padding-bottom: 60px;
+        }
+
+        .container {
+          margin: 0 auto;
+          max-width: 1000px;
+        }
+
+        .jumbotron {
+          margin: 40px 0;          
+        }
+      </style>
+        {% block css %} {% endblock %}
+    </head>
+{% endblock %}
+    <body>
+    {% block body %} {% endblock %}
+    <script src="{{ asset('bundles/backend/js/jquery.min.js') }}"></script>
+    <script src="{{ asset('bundles/backend/js/bootstrap.min.js') }}"></script>
+    {% block js %} {% endblock %}
+    </body>

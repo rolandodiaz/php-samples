@@ -1,0 +1,73 @@
+<?php
+
+namespace Upc\Sunat\SunatBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Description of Debt
+ *
+ * @author herald olivares
+ */
+/**
+ * Upc\Sunat\SunatBundle\Entity\Debt
+ *
+ * @ORM\Table(name="debt")
+ * @ORM\Entity(repositoryClass="Upc\Sunat\SunatBundle\Repository\DebtRepository")
+ */
+class Debt implements \Serializable {
+    
+    /**
+     /**
+     * @ORM\Column(type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+    
+    /**
+     * @ORM\ManyToOne(targetEntity="Concept")
+     * @ORM\JoinColumn(name="concept_id", referencedColumnName="id")
+     */    
+    private $concept;
+    
+    /**
+     * @ORM\ManyToOne(targetEntity="Person")
+     * @ORM\JoinColumn(name="person_id", referencedColumnName="id")
+     */    
+    private $person;
+    
+    /**
+     * @ORM\Column(name="name", type="string", length=50, nullable=false)
+     */
+    private $period;
+    
+    /**
+     * @ORM\Column(name="resolution_number", type="string", length=10, nullable=true)
+     */
+    private $resolution_number;
+    
+    /**
+     * @ORM\Column(name="tax_code", type="string", length=10, nullable=true)
+     */
+    private $tax_code;
+    
+    /**
+     * @ORM\Column(name="amount", type="decimal", nullable=false)
+     */
+    private $amount;
+    
+    public function serialize() {
+        return serialize(array(
+            $this->id,
+        ));
+    }
+
+    public function unserialize($serialized) {
+        list (
+            $this->id,
+        ) = unserialize($serialized);
+    }
+}
+
+?>

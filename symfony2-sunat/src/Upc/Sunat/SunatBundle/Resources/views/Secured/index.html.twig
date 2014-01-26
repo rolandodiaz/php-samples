@@ -1,0 +1,9 @@
+{% extends "SunatBundle::layout.html.twig" %}
+{% block body %}
+<div class="container">
+    {% include 'SunatBundle:Includes:header.html.twig' %}
+    {% include 'SunatBundle:Includes:menu.html.twig' %}
+    <div class="jumbotron">{% block content %}{% endblock %}  </div>
+{% include 'SunatBundle:Includes:footer.html.twig' %}
+</div>
+{% endblock %}

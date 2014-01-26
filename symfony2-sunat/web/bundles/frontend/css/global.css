@@ -1,0 +1,142 @@
+body {padding-bottom: 40px;color: #5a5a5a;}
+#menubar { position: absolute;top: 0;left: 0;right: 0;z-index: 10;margin-top: 20px;margin-bottom: -90px;}
+#menubar .navbar .navbar-inner {border: 0;-webkit-box-shadow: 0 2px 10px rgba(0,0,0,.25);-moz-box-shadow: 0 2px 10px rgba(0,0,0,.25);box-shadow: 0 2px 10px rgba(0,0,0,.25);}
+#menubar .navbar .brand {padding: 14px 20px 16px;font-size: 16px;font-weight: bold;text-shadow: 0 -1px 0 rgba(0,0,0,.5);}
+#menubar .navbar .nav > li > a {padding: 15px 20px;}
+#menubar .navbar .btn-navbar {margin-top: 10px;}
+
+
+/* Carousel base class */
+#carousel_home {
+  margin-bottom: 60px;
+}
+
+#carousel_home .container {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+#carousel_home .carousel-control {
+  background-color: transparent;
+  border: 0;
+  font-size: 120px;
+  margin-top: 0;
+  text-shadow: 0 1px 1px rgba(0,0,0,.4);
+}
+
+#carousel_home .item {
+  height: 500px;
+}
+
+#carousel_home img {
+  min-width: 100%;
+  height: 500px;
+}
+
+#carousel_home .carousel-caption {
+  background-color: transparent;
+  position: static;
+  max-width: 550px;
+  padding: 0 20px;
+  margin-bottom: 100px;
+}
+#carousel_home .carousel-caption h1,
+#carousel_home .carousel-caption .lead {
+  margin: 0;
+  line-height: 1.25;
+  color: #fff;
+  text-shadow: 0 1px 1px rgba(0,0,0,.4);
+}
+#carousel_home .carousel-caption .btn {
+  margin-top: 10px;
+}
+
+
+
+#myCarousel {
+margin-bottom: 0;
+padding: 0 40px 30px 40px;
+}
+/* Reposition the controls slightly */
+
+#myCarousel .carousel-control.right {
+right: -12px;
+}
+
+#myCarousel .carousel-control.left {
+left: -12px;
+}
+/* Changes the position of the indicators */
+#myCarousel .carousel-indicators {
+right: 50%;
+top: auto;
+bottom: 0px;
+margin-right: -19px;
+}
+/* Changes the colour of the indicators */
+#myCarousel .carousel-indicators li {
+background: #c0c0c0;
+}
+#myCarousel .carousel-indicators .active {
+background: #333333;
+}
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (max-width: 979px) {
+
+  #menubar .container.navbar-wrapper {
+    margin-bottom: 0;
+    width: auto;
+  }
+  #menubar .navbar-inner {
+    border-radius: 0;
+    margin: -20px 0;
+  }
+
+  #carousel_home .item {
+    height: 500px;
+  }
+  #carousel_home img {
+    width: auto;
+    height: 500px;
+  }
+}
+
+
+@media (max-width: 767px) {
+
+  #menubar .navbar-inner {
+    margin: -20px;
+  }
+
+  #carousel_home {
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+  #carousel_home  .container {
+
+  }
+  #carousel_home .item {
+    height: 300px;
+  }
+  #carousel_home .carousel img {
+    height: 300px;
+  }
+  #carousel_home .carousel-caption {
+    width: 65%;
+    padding: 0 70px;
+    margin-bottom: 40px;
+  }
+  #carousel_home .carousel-caption h1 {
+    font-size: 30px;
+  }
+  #carousel_home .carousel-caption .lead,
+  #carousel_home .carousel-caption .btn {
+    font-size: 18px;
+  }
+
+}

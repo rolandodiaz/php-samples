@@ -1,0 +1,82 @@
+{% extends 'SunatBundle:Secured:index.html.twig' %}
+{% block content %}
+<ul id="myTab" class="nav nav-tabs">
+    <li class="active"><a href="{{ path('debt_add') }}" >Agregar</a></li>
+    <li class=""><a href="{{ path('debt_list') }}" >Consultar</a></li>
+</ul>
+<div id="tabContenido" class="tab-content">
+    <div class="tab-pane fade active in" id="new">                
+    {{ form_start(form) }}
+    <div class="modal">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h3>Registrar Multa</h3>
+        </div>
+        <div class="modal-body">
+        {% for flashMessage in app.session.flashbag.get('debt') %}
+            <div class="alert alert-success">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                {{ flashMessage }}
+            </div>
+        {% endfor %}
+        {{ form_errors(form) }}
+            <div class="row-fluid">
+                <div class="span1">
+                    {{ form_label(form.concept) }}    
+                </div>
+                <div class="span3">
+                    {{ form_errors(form.concept) }}
+                    {{ form_widget(form.concept) }}
+                </div>
+                <div class="span1">
+                    {{ form_label(form.person) }}
+                </div>
+                <div class="span3">
+                    {{ form_errors(form.person) }}
+                    {{ form_widget(form.person) }}
+                </div>
+            </div>
+            <div class="row-fluid">
+                <div class="span1">
+                    {{ form_label(form.resolutionNumber) }}    
+                </div>
+                <div class="span3">
+                    {{ form_errors(form.resolutionNumber) }}
+                    {{ form_widget(form.resolutionNumber) }}
+                </div>
+                <div class="span1">
+                    {{ form_label(form.taxCode) }}
+                </div>
+                <div class="span3">
+                    {{ form_errors(form.taxCode) }}
+                    {{ form_widget(form.taxCode) }}
+                </div>
+            </div>
+            <div class="row-fluid">
+                <div class="span1">
+                    {{ form_label(form.period) }}    
+                </div>
+                <div class="span3">
+                    {{ form_errors(form.period) }}
+                    {{ form_widget(form.period) }}
+                </div>
+                <div class="span1">
+                    {{ form_label(form.amount) }}
+                </div>
+                <div class="span3">
+                    {{ form_errors(form.amount) }}
+                    {{ form_widget(form.amount) }}
+                </div>
+            </div>
+        </div>
+            <div class="modal-footer">
+                {{ form_widget(form.save) }}
+                {{ form_widget(form.saveAndAdd) }}
+                <a href="#" class="btn">Cerrar</a>
+            </div>            
+        </div>
+        {{ form_end(form) }}
+    </div>
+</div>
+{% endblock %}
+              

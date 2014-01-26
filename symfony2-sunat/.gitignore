@@ -1,0 +1,9 @@
+/web/bundles/framework
+/web/bundles/sensiodistribution
+/app/bootstrap*
+/app/cache/*
+/app/logs/*
+/vendor/
+/app/config/parameters.yml
+/nbproject/private/
+/composer.lock
